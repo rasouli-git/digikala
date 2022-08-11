@@ -1,0 +1,76 @@
+$color-white: #fff;
+$color-neutral-00: #fff;
+$color-neutral-100: #f0f0f1;
+$color-neutral-200: #e0e0e2;
+$color-neutral-300: #c0c2c5;
+$color-neutral-400: #a1a3a8;
+$color-neutral-500: #a1a3a8;
+$color-neutral-600: #62666d;
+$color-neutral-700: #424750;
+$color-neutral-800: #232933;
+$color-neutral-900: #0c0c0c;
+
+$color-primary-500: #ef4056;
+$color-primary-700: #ef394e;
+
+$color-secondary-500: #19bfd3;
+$color-button-secondary: #19bfd3;
+
+$color-hover-header: #e6123d;
+
+$color-icon-warning: #f9a825;
+$color-rating-0-2: #f9bc00;
+
+$color-icon-low-emphasis: #a1a3a8;
+$color-icon-high-emphasis: #424750;
+
+$padding-org: 15px 18px;
+$padding: 10px;
+
+$margin: 10px;
+
+$radius: 12px;
+
+$border:1px solid $color-neutral-100;
+
+@font-face {
+  font-family: "vazir";
+  src: url("../fonts/vazir.eot");
+  src: url("../fonts/vazir.ttf") format("truetype"),
+    url("../fonts/vazir.woff2") format("woff2"),
+    url("../fonts/vazir.woff") format("woff");
+}
+@font-face {
+  font-family: "IranYekan";
+  src: url("../fonts/iranyekanwebmedium.2d4f96e5.woff") format("woff");
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+html {
+  direction: rtl;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.1rem;
+  font-family: "IranYekan";
+  box-sizing: border-box;
+}
+
+.container {
+  min-width: 1300px;
+  margin: 0 auto;
+}

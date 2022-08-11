@@ -1,0 +1,238 @@
+@import "base";
+
+header {
+  .header {
+    padding: $padding-org;
+
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: $border;
+      padding-bottom: $padding;
+
+      .hamburger {
+        cursor: pointer;
+        i {
+          font-size: 1.6rem;
+        }
+      }
+      .logo {
+        width: 92px;
+        height: 22px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .question {
+        width: 17px;
+        height: 17px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &__middle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: $padding;
+
+      .middle-right {
+        width: 80%;
+        .logo {
+          display: none;
+        }
+        .search-box {
+          display: flex;
+          align-items: center;
+          padding: 1.3rem 1rem;
+          border-radius: $radius;
+          background-color: $color-neutral-100;
+          color: $color-neutral-500;
+          min-width: 100px;
+          margin-left: $margin;
+
+          i {
+            font-size: 1.7rem;
+            margin-left: $margin;
+          }
+          span {
+            font-size: 1.1rem;
+          }
+        }
+      }
+      .middle-left {
+        display: flex;
+        align-items: center;
+
+        .sign {
+          display: flex;
+          align-items: center;
+          margin-left: $margin + 10;
+
+          img {
+            width: 20px;
+            height: 24px;
+            transform: rotate(180deg);
+            object-fit: contain;
+            margin-left: $margin;
+          }
+
+          .sign-in {
+            cursor: pointer;
+          }
+          .sign-up {
+            display: none;
+          }
+        }
+        .cart {
+          img {
+            width: 20px;
+            height: 24px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+    &__bottom {
+      border-top: $border;
+      padding-top: $padding;
+      margin-top: $margin;
+
+      .bottom-right {
+        width: 300px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: $color-neutral-00;
+
+        .backdrop {
+          position: fixed;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100vh;
+          background-color: $color-neutral-900;
+          opacity: 0;
+          pointer-events: none;
+          transition: all 0.3s ease-in-out;
+
+          &.active {
+            opacity: 0.4;
+            pointer-events: auto;
+          }
+        }
+        .menu {
+          position: fixed;
+          top: 0;
+          right: 0;
+          width: 300px;
+          height: 100vh;
+          overflow-y: auto;
+          padding: $padding $padding * 2;
+          background-color: $color-neutral-00;
+          z-index: 99;
+          transition: all 0.3s ease-in-out;
+          color: $color-neutral-700;
+          -ms-overflow-style: none; /* Internet Explorer 10+ */
+          scrollbar-width: none; /* Firefox */
+          transform: translate(100%);
+          opacity: 0;
+          pointer-events: none;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          &.active {
+            opacity: 1;
+            transform: translate(0);
+            pointer-events: unset;
+          }
+
+          .nav-logo {
+            width: 100%;
+            display: block;
+            border-bottom: $border;
+            padding: $padding 0;
+
+            img {
+              height: 24px;
+              cursor: pointer;
+            }
+          }
+          .markets {
+            padding-top: $padding;
+          }
+          .markets,
+          .question {
+            font-size: 1.3rem;
+            div {
+              margin-bottom: $margin * 2;
+              cursor: pointer;
+
+              i {
+                width: 24px;
+                height: 24px;
+                margin-left: $margin;
+                font-size: 1.8rem;
+                color: $color-icon-low-emphasis;
+              }
+            }
+          }
+          .question {
+            border-bottom: $border;
+          }
+          .categories {
+            padding-top: $padding;
+            &__icon {
+              display: none;
+            }
+            &__title {
+              font-size: 1.4rem;
+              color: $color-neutral-900;
+              padding: $padding 0;
+              display: block;
+            }
+            .first-row {
+              li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 1.3rem;
+                margin: 2.5rem 0;
+              }
+            }
+          }
+        }
+      }
+
+      .bottom-left {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .location {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 18px;
+            height: 18px;
+            margin-left: $margin;
+          }
+        }
+        i {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
