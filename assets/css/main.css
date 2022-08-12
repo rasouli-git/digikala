@@ -165,7 +165,6 @@ header .header__bottom .bottom-right .menu {
   width: 300px;
   height: 100vh;
   overflow-y: auto;
-  padding: 10px 20px;
   background-color: #fff;
   z-index: 99;
   transition: all 0.3s ease-in-out;
@@ -188,13 +187,14 @@ header .header__bottom .bottom-right .menu .nav-logo {
   width: 100%;
   display: block;
   border-bottom: 1px solid #f0f0f1;
-  padding: 10px 0;
+  padding: 10px 20px;
 }
 header .header__bottom .bottom-right .menu .nav-logo img {
   height: 24px;
   cursor: pointer;
 }
 header .header__bottom .bottom-right .menu .markets {
+  padding: 10px 20px;
   padding-top: 10px;
 }
 header .header__bottom .bottom-right .menu .markets,
@@ -215,6 +215,7 @@ header .header__bottom .bottom-right .menu .question div i {
   color: #a1a3a8;
 }
 header .header__bottom .bottom-right .menu .question {
+  padding: 10px 20px;
   border-bottom: 1px solid #f0f0f1;
 }
 header .header__bottom .bottom-right .menu .categories {
@@ -226,15 +227,51 @@ header .header__bottom .bottom-right .menu .categories__icon {
 header .header__bottom .bottom-right .menu .categories__title {
   font-size: 1.4rem;
   color: #0c0c0c;
-  padding: 10px 0;
+  padding: 10px 10px;
   display: block;
 }
-header .header__bottom .bottom-right .menu .categories .first-row li {
+header .header__bottom .bottom-right .menu .categories .first-row > li {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 1.3rem;
-  margin: 2.5rem 0;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+header .header__bottom .bottom-right .menu .categories .first-row > li.active {
+  color: #ef4056;
+}
+header .header__bottom .bottom-right .menu .categories .first-row > li.active > .icon i {
+  transform: rotate(180deg);
+}
+header .header__bottom .bottom-right .menu .categories .first-row > li.active .second-row {
+  display: unset;
+}
+header .header__bottom .bottom-right .menu .categories .first-row > li > .title {
+  padding-right: 10px;
+}
+header .header__bottom .bottom-right .menu .categories .first-row > li > .icon {
+  padding-left: 20px;
+}
+header .header__bottom .bottom-right .menu .categories .first-row .second-row {
+  width: 100%;
+  border-top: 1px solid #f0f0f1;
+  background-color: #f0f0f1;
+  padding: 10px 0;
+  padding-right: 2rem;
+  margin: 10px 0;
+  transition: all 0.3s ease-in;
+  display: none;
+}
+header .header__bottom .bottom-right .menu .categories .first-row .second-row > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  color: #424750;
+}
+header .header__bottom .bottom-right .menu .categories .first-row .second-row > li i {
+  padding-left: 20px;
 }
 header .header__bottom .bottom-left {
   display: flex;

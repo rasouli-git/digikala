@@ -10,3 +10,12 @@ backDrop.addEventListener('click',()=>{
     backDrop.classList.remove('active');
     navMenu.classList.remove('active');
 })
+
+
+const firstMenu = document.querySelectorAll('.first-row li');
+
+firstMenu.forEach(li=>{
+    li.addEventListener('click',()=>{
+        li.classList.toggle('active');
+    })
+})

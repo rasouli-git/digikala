@@ -136,7 +136,7 @@ header {
           width: 300px;
           height: 100vh;
           overflow-y: auto;
-          padding: $padding $padding * 2;
+
           background-color: $color-neutral-00;
           z-index: 99;
           transition: all 0.3s ease-in-out;
@@ -161,7 +161,7 @@ header {
             width: 100%;
             display: block;
             border-bottom: $border;
-            padding: $padding 0;
+            padding: $padding $padding * 2;
 
             img {
               height: 24px;
@@ -169,6 +169,7 @@ header {
             }
           }
           .markets {
+            padding: $padding $padding * 2;
             padding-top: $padding;
           }
           .markets,
@@ -188,9 +189,11 @@ header {
             }
           }
           .question {
+            padding: $padding $padding * 2;
             border-bottom: $border;
           }
           .categories {
+            // padding: $padding $padding * 2;
             padding-top: $padding;
             &__icon {
               display: none;
@@ -198,16 +201,59 @@ header {
             &__title {
               font-size: 1.4rem;
               color: $color-neutral-900;
-              padding: $padding 0;
+              padding: $padding $padding;
               display: block;
             }
             .first-row {
-              li {
+              & > li {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 font-size: 1.3rem;
-                margin: 2.5rem 0;
+                margin: $margin * 2 0;
+                flex-wrap: wrap;
+
+                &.active {
+                  color: $color-primary-500;
+
+                  >.icon i {
+                    transform: rotate(180deg);
+                  }
+
+                  .second-row {
+                    display: unset;
+                  }
+                }
+
+                >.title {
+                  padding-right: $padding;
+                }
+                >.icon {
+                  padding-left: $padding * 2;
+                }
+              }
+
+              .second-row {
+                width: 100%;
+                border-top: $border;
+                background-color: $color-neutral-100;
+                padding: $padding 0;
+                padding-right: 2rem;
+                margin: $margin 0;
+                transition: all 0.3s ease-in;
+                display: none;
+
+                & > li {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  margin: $margin * 2 0;
+                  color: $color-neutral-700;
+
+                  i {
+                    padding-left: $padding * 2;
+                  }
+                }
               }
             }
           }
