@@ -14,6 +14,7 @@ $color-primary-500: #ef4056;
 $color-primary-700: #ef394e;
 
 $color-secondary-500: #19bfd3;
+$color-button-text-secondary: #fff;
 $color-button-secondary: #19bfd3;
 
 $color-hover-header: #e6123d;
@@ -28,10 +29,13 @@ $padding-org: 15px 18px;
 $padding: 10px;
 
 $margin: 10px;
+$margin-m: 5px;
 
 $radius: 12px;
+$radius-secondary:8px;
 
 $border:1px solid $color-neutral-100;
+$border-secondary:1px solid $color-neutral-200;
 
 @font-face {
   font-family: "vazir";
