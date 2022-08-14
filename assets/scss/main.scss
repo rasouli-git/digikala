@@ -1,5 +1,5 @@
 @import "base";
-
+@import "login";
 header {
   .header {
     padding: $padding-org;
@@ -35,8 +35,6 @@ header {
           height: 100%;
         }
 
-        
-
         &__box {
           position: fixed;
           top: 0;
@@ -45,11 +43,11 @@ header {
           height: 100vh;
           z-index: 2;
           background-color: $color-neutral-00;
-          transition: transform .3s ease-in;
+          transition: transform 0.3s ease-in;
           transform: translateY(100%);
 
-          &.active{
-              transform: translateY(0);
+          &.active {
+            transform: translateY(0);
           }
 
           .box-header {
@@ -89,8 +87,8 @@ header {
                   margin-bottom: $margin * 2;
 
                   &.show {
-                    .question-title{
-                      i{
+                    .question-title {
+                      i {
                         transform: rotate(180deg);
                       }
                     }
@@ -105,8 +103,8 @@ header {
                     justify-content: space-between;
                     font-size: 1.3rem;
 
-                    i{
-                      transition: all .3s ease;
+                    i {
+                      transition: all 0.3s ease;
                     }
                   }
                   .answer-detail {
@@ -140,8 +138,6 @@ header {
             }
           }
         }
-        
-
       }
     }
 
@@ -155,6 +151,9 @@ header {
         width: 80%;
         .logo {
           display: none;
+          a {
+            display: block;
+          }
         }
         .search-box {
           display: flex;
@@ -180,23 +179,25 @@ header {
         align-items: center;
 
         .sign {
-          display: flex;
-          align-items: center;
           margin-left: $margin + 10;
 
-          img {
-            width: 20px;
-            height: 24px;
-            transform: rotate(180deg);
-            object-fit: contain;
-            margin-left: $margin;
-          }
+          a {
+            display: flex;
+            align-items: center;
+            img {
+              width: 20px;
+              height: 24px;
+              transform: rotate(180deg);
+              object-fit: contain;
+              margin-left: $margin;
+            }
 
-          .sign-in {
-            cursor: pointer;
-          }
-          .sign-up {
-            display: none;
+            .sign-in {
+              cursor: pointer;
+            }
+            .sign-up {
+              display: none;
+            }
           }
         }
         .cart {
@@ -398,6 +399,7 @@ header {
   header {
     .header {
       padding: $padding $padding * 2;
+      padding-bottom: 0;
 
       &__top {
         display: none;
@@ -411,7 +413,7 @@ header {
           align-items: center;
           justify-content: space-between;
           .logo {
-            display: unset;
+            display: block;
             margin-left: $margin * 2;
           }
           .search-box {
@@ -436,23 +438,32 @@ header {
             display: flex;
             align-items: center;
             margin-left: $margin + 10;
+            border: $border-secondary;
+            padding: 5px 15px;
+            border-radius: $radius-secondary;
+            cursor: pointer;
 
-            img {
-              width: 20px;
-              height: 24px;
-              transform: rotate(180deg);
-              object-fit: contain;
-              margin-left: $margin;
-            }
+            a {
+              display: flex;
+              align-items: center;
+              img {
+                width: 20px;
+                height: 24px;
+                transform: rotate(180deg);
+                object-fit: contain;
+                margin-left: $margin;
+              }
 
-            .sign-in {
-              cursor: pointer;
-            }
-            .sign-up {
-              display: none;
+              .sign-up {
+                display: unset;
+                margin-right: $margin;
+                padding-right: $padding;
+                border-right: $border-secondary;
+              }
             }
           }
           .cart {
+            cursor: pointer;
             img {
               width: 20px;
               height: 24px;
@@ -484,6 +495,7 @@ header {
             height: 100vh;
             opacity: 0;
             pointer-events: unset;
+            display: none;
 
             &.active {
               opacity: 0.4;
@@ -503,11 +515,6 @@ header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-
-            .markets,
-            .question,
-            .categories {
-            }
 
             .nav-logo {
               display: none;
@@ -551,6 +558,13 @@ header {
             .categories {
               order: 1;
               padding-top: unset;
+              cursor: pointer;
+
+              &:hover {
+                .categories__menu {
+                  display: flex;
+                }
+              }
 
               &__head {
                 display: flex;
@@ -573,13 +587,14 @@ header {
               }
               &__menu {
                 position: absolute;
-                top: 60px;
+                top: 50px;
                 width: 100%;
-                display: flex;
+                display: none;
                 align-items: center;
                 background-color: $color-neutral-00;
                 padding: 0;
                 border: $border;
+                transition: all 0.5s ease;
               }
 
               .first-row {
@@ -638,6 +653,7 @@ header {
 
         .bottom-left {
           display: unset;
+          cursor: pointer;
           i {
             display: none;
           }
