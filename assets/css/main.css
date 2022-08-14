@@ -95,6 +95,8 @@ main .sign__detail form .sign__alarm {
 }
 main .sign__detail form .btn-submit {
   width: 100%;
+  border: 0;
+  outline: 0;
   background-color: #ef4056;
   color: #fff;
   padding: 15px;
