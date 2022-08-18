@@ -266,6 +266,7 @@ header .header__middle {
 }
 header .header__middle .middle-right {
   width: 80%;
+  max-width: 750px;
 }
 header .header__middle .middle-right .logo {
   display: none;
