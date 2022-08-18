@@ -395,6 +395,97 @@ header {
   }
 }
 
+main {
+  #slider {
+    width: 100%;
+    height: 270px;
+    position: relative;
+
+    .slider {
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+        .slider__btn {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+      &__items {
+        width: 100%;
+        height: 100%;
+
+        img {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          visibility: hidden;
+          opacity: 0;
+
+          &.active {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+
+      &__btn {
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+        display: flex;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+
+        .next-btn,
+        .prev-btn {
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $color-neutral-00;
+          border-radius: 100%;
+          margin-right: $margin;
+
+          i {
+            font-size: 1.2rem;
+            color: $color-neutral-700;
+          }
+        }
+      }
+
+      &__navigation{
+        position: absolute;
+        left: 20px;
+        bottom: 10px;
+        display: flex;
+        align-items: center;
+
+        li{
+          width: 4px;
+          height: 4px;
+          border-radius: 100%;
+          background-color: $color-neutral-500;
+          margin: 0 5px;
+
+          &.active{
+            width: 16px;
+            height: 7px;
+            border-radius: $radius;
+            background-color: $color-neutral-00;
+          }
+        }
+      }
+
+    }
+  }
+}
+
 @media screen and (min-width: 1024px) {
   header {
     .header {
@@ -658,6 +749,21 @@ header {
             display: none;
           }
         }
+      }
+    }
+  }
+  main{
+    #slider {
+      height: 400px;
+  
+      .slider {
+  
+        &__navigation{
+          left: unset;
+          right: 50px;
+          bottom: 15px;
+        }
+  
       }
     }
   }

@@ -28,10 +28,10 @@ const commonQuestion = questionBox.querySelector(".common-question");
 const questionItems = commonQuestion.querySelectorAll("li");
 
 question.addEventListener("click", () => {
-  questionBox.classList.add('active');
+  questionBox.classList.add("active");
 });
 closeQuestionBox.addEventListener("click", (e) => {
-    questionBox.classList.remove('active');
+  questionBox.classList.remove("active");
 });
 
 questionItems.forEach((item) => {
@@ -40,3 +40,61 @@ questionItems.forEach((item) => {
   });
 });
 // question Box
+
+// slider
+
+const nextBtn = document.querySelector(".next-btn");
+const prevBtn = document.querySelector(".prev-btn");
+const items = document.querySelectorAll("#slider .item");
+const navigation = document.querySelectorAll(".slider__navigation li");
+const totalItems = items.length;
+let index = 0;
+let duration = 6000;
+
+nextBtn.addEventListener("click", () => {
+  slider("next");
+});
+prevBtn.addEventListener("click", () => {
+  slider("prev");
+});
+
+function slider(dir) {
+  navigationSlide();
+  if (dir === "next") {
+    if (index === totalItems - 1) {
+      index = 0;
+    } else {
+      index++;
+    }
+  }
+  if (dir === "prev") {
+    if (index === 0) {
+      index = totalItems - 1;
+    } else {
+      index--;
+    }
+  }
+  clearInterval(timer);
+  timer = setInterval(autoSlide, duration);
+
+  items.forEach((item) => {
+    item.classList.remove("active");
+  });
+  items[index].classList.add("active");
+}
+
+function navigationSlide() {
+  navigation.forEach((item) => {
+    item.classList.remove("active");
+  });
+  navigation[index].classList.add("active");
+}
+
+function autoSlide() {
+  slider("next");
+  navigationSlide();
+}
+
+var timer = setInterval(autoSlide, duration);
+
+// end slider
