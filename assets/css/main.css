@@ -332,6 +332,7 @@ header .header__bottom .bottom-right {
   top: 0;
   right: 0;
   background-color: #fff;
+  z-index: 2;
 }
 header .header__bottom .bottom-right .backdrop {
   position: fixed;
@@ -356,14 +357,12 @@ header .header__bottom .bottom-right .menu {
   height: 100vh;
   overflow-y: auto;
   background-color: #fff;
-  z-index: 99;
   transition: all 0.3s ease-in-out;
   color: #424750;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
   transform: translate(100%);
   opacity: 0;
-  pointer-events: none;
 }
 header .header__bottom .bottom-right .menu::-webkit-scrollbar {
   display: none;
