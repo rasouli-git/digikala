@@ -584,6 +584,135 @@ main #digi-link .link__items li a span {
   font-size: 1rem;
   color: #424750;
 }
+main #amazing-slider .swiper-container {
+  padding: 10px 0;
+  background: linear-gradient(to top, #ef4056, #ef394e);
+  overflow: hidden;
+}
+main #amazing-slider .swiper-container .swiper-wrapper {
+  touch-action: pan-y;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper {
+  display: flex;
+  align-items: center;
+  transform: translate3d(0, 0, 0);
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-first {
+  padding: 0 10px;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-first .intro {
+  padding: 0 10px;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-first .intro a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-first .intro a .intro__title {
+  width: 92px;
+  height: 77px;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-first .intro a .intro__image {
+  width: 145px;
+  height: 115px;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-first .intro a .intro__title,
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-first .intro a .intro__image {
+  margin-bottom: 10px;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-first .intro a .intro__title img,
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-first .intro a .intro__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-first .intro a .intro__detail {
+  padding-bottom: 10px;
+  color: #fff;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-first .intro a .intro__detail i {
+  font-size: 0.9rem;
+  margin-right: 2px;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides {
+  border-radius: 12px;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul li {
+  width: 154px;
+  min-width: 154px;
+  background-color: #fff;
+  margin-left: 4px;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul li a {
+  padding: 10px;
+  display: block;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul li a .slide-image {
+  width: 130px;
+  height: 130px;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul li a .slide-image img {
+  width: 100%;
+  height: 100%;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul li a .slide-price {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul li a .slide-price .discount {
+  width: 40px;
+  height: 20px;
+  background-color: #ef4056;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul li a .slide-price .new-price span {
+  font-size: 1.3rem;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul li a .slide-price .new-price span:last-child {
+  font-size: 0.9rem;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul li a .slide-old-price {
+  margin-top: 20px;
+  text-align: left;
+  text-decoration: line-through;
+  color: #c0c2c5;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul li a .slide-old-price span {
+  padding-left: 30px;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul li a .slide-progress {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  direction: ltr;
+  visibility: hidden;
+  opacity: 0;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul li a .slide-progress .progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: #e0e0e2;
+  border-radius: 12px;
+  overflow: hidden;
+}
+main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul li a .slide-progress .progress-bar .progress {
+  width: 80%;
+  height: 100%;
+  background-color: #ef394e;
+}
 
 @media screen and (min-width: 1024px) {
   header .header {

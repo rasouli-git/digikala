@@ -214,7 +214,7 @@ header {
       border-top: $border;
       padding-top: $padding;
       margin-top: $margin;
-      
+
       .bottom-right {
         width: 300px;
         position: fixed;
@@ -459,21 +459,21 @@ main {
         }
       }
 
-      &__navigation{
+      &__navigation {
         position: absolute;
         left: 20px;
         bottom: 10px;
         display: flex;
         align-items: center;
 
-        li{
+        li {
           width: 4px;
           height: 4px;
           border-radius: 100%;
           background-color: $color-neutral-500;
           margin: 0 5px;
 
-          &.active{
+          &.active {
             width: 16px;
             height: 7px;
             border-radius: $radius;
@@ -481,30 +481,28 @@ main {
           }
         }
       }
-
     }
   }
-  #digi-link{
-
-    .link__items{
+  #digi-link {
+    .link__items {
       display: grid;
-      grid-template-columns: repeat(4,minmax(0,1fr));
-      margin-top: $margin*2;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: $margin * 2;
       padding: 0 $padding;
 
-      li{
-        margin-bottom: $margin*2;
+      li {
+        margin-bottom: $margin * 2;
 
-        a{
+        a {
           display: flex;
           flex-direction: column;
           align-items: center;
 
-          img{
+          img {
             width: 52px;
             height: 52px;
           }
-          span{
+          span {
             margin-top: $margin;
             font-size: 1rem;
             color: $color-neutral-700;
@@ -513,9 +511,161 @@ main {
       }
     }
   }
+  #amazing-slider {
+    .swiper-container {
+      padding: $padding 0;
+      background: linear-gradient(
+        to top,
+        $color-primary-500,
+        $color-primary-700
+      );
+      overflow: hidden;
+
+      .swiper-wrapper {
+        touch-action: pan-y;
+        .swiper {
+          display: flex;
+          align-items: center;
+          transform: translate3d(0,0,0);
+
+          .swiper-first {
+            padding: 0 $padding;
+
+            .intro {
+              padding: 0 $padding;
+
+              a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .intro__title {
+                  width: 92px;
+                  height: 77px;
+                }
+                .intro__image {
+                  width: 145px;
+                  height: 115px;
+                }
+
+                .intro__title,
+                .intro__image {
+                  margin-bottom: $margin;
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                  }
+                }
+                .intro__detail {
+                  padding-bottom: $padding;
+                  color: $color-neutral-00;
+
+                  i {
+                    font-size: 0.9rem;
+                    margin-right: 2px;
+                  }
+                }
+              }
+            }
+          }
+          .swiper-slides {
+            border-radius: $radius;
+
+            ul {
+              background-color: transparent;
+              display: flex;
+              align-items: center;
+              overflow: hidden;
+
+              li {
+                width: 154px;
+                min-width: 154px;
+                background-color: $color-neutral-00;
+                margin-left: 4px;
+
+                a {
+                  padding: $padding;
+                  display: block;
+
+                  .slide-image {
+                    width: 130px;
+                    height: 130px;
+
+                    img {
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+                  .slide-price {
+                    margin: $margin 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .discount {
+                      width: 40px;
+                      height: 20px;
+                      background-color: $color-primary-500;
+                      color: $color-neutral-00;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      border-radius: $radius;
+                    }
+                    .new-price{
+
+                      span{
+                        font-size: 1.3rem;
+                      }
+                      span:last-child{
+                        font-size: .9rem;
+                      }
+                    }
+                  }
+                  .slide-old-price {
+                    margin-top: $margin*2;
+                    text-align: left;
+                    text-decoration: line-through;
+                    color: $color-neutral-300;
+
+                    span {
+                      padding-left: $padding*3;
+                    }
+                  }
+                  
+                  .slide-progress{
+                    margin-top: $margin;
+                    margin-bottom: $margin - 5px;
+                    direction: ltr;
+                    visibility: hidden;
+                    opacity: 0;
+
+                    .progress-bar{
+                      width: 100%;
+                      height: 4px;
+                      background-color: $color-neutral-200;
+                      border-radius: $radius;
+                      overflow: hidden;
+
+                      .progress{
+                        width: 80%;
+                        height: 100%;
+                        background-color: $color-primary-700;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
-
-
 
 @media screen and (min-width: 1024px) {
   header {
@@ -783,33 +933,30 @@ main {
       }
     }
   }
-  main{
+  main {
     #slider {
       height: 400px;
-  
+
       .slider {
-  
-        &__navigation{
+        &__navigation {
           left: unset;
           right: 50px;
           bottom: 15px;
         }
-  
       }
     }
-    #digi-link{
-
-      .link__items{
+    #digi-link {
+      .link__items {
         display: flex;
         justify-content: space-evenly;
-        margin: $margin*3 auto;
+        margin: $margin * 3 auto;
         padding: 0 $padding;
-  
-        li{
-          margin-bottom:0;
-  
-          a{
-            span{
+
+        li {
+          margin-bottom: 0;
+
+          a {
+            span {
               font-size: 1.2rem;
             }
           }
