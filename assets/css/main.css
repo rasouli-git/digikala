@@ -36,7 +36,7 @@ body {
 }
 
 .container {
-  min-width: 1300px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -561,6 +561,29 @@ main #slider .slider__navigation li.active {
   border-radius: 12px;
   background-color: #fff;
 }
+main #digi-link .link__items {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 20px;
+  padding: 0 10px;
+}
+main #digi-link .link__items li {
+  margin-bottom: 20px;
+}
+main #digi-link .link__items li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main #digi-link .link__items li a img {
+  width: 52px;
+  height: 52px;
+}
+main #digi-link .link__items li a span {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #424750;
+}
 
 @media screen and (min-width: 1024px) {
   header .header {
@@ -810,6 +833,18 @@ header .header__bottom .bottom-right .menu .question div i {
     left: unset;
     right: 50px;
     bottom: 15px;
+  }
+  main #digi-link .link__items {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px auto;
+    padding: 0 10px;
+  }
+  main #digi-link .link__items li {
+    margin-bottom: 0;
+  }
+  main #digi-link .link__items li a span {
+    font-size: 1.2rem;
   }
 }
 .x {

@@ -484,7 +484,38 @@ main {
 
     }
   }
+  #digi-link{
+
+    .link__items{
+      display: grid;
+      grid-template-columns: repeat(4,minmax(0,1fr));
+      margin-top: $margin*2;
+      padding: 0 $padding;
+
+      li{
+        margin-bottom: $margin*2;
+
+        a{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          img{
+            width: 52px;
+            height: 52px;
+          }
+          span{
+            margin-top: $margin;
+            font-size: 1rem;
+            color: $color-neutral-700;
+          }
+        }
+      }
+    }
+  }
 }
+
+
 
 @media screen and (min-width: 1024px) {
   header {
@@ -764,6 +795,25 @@ main {
           bottom: 15px;
         }
   
+      }
+    }
+    #digi-link{
+
+      .link__items{
+        display: flex;
+        justify-content: space-evenly;
+        margin: $margin*3 auto;
+        padding: 0 $padding;
+  
+        li{
+          margin-bottom:0;
+  
+          a{
+            span{
+              font-size: 1.2rem;
+            }
+          }
+        }
       }
     }
   }

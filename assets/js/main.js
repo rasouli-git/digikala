@@ -51,6 +51,7 @@ const totalItems = items.length;
 let index = 0;
 let duration = 6000;
 
+
 nextBtn.addEventListener("click", () => {
   slider("next");
 });
