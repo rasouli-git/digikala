@@ -512,6 +512,7 @@ main {
     }
   }
   #amazing-slider {
+    margin-bottom: $margin;
     .swiper-container {
       padding: $padding 0;
       background: linear-gradient(
@@ -523,10 +524,10 @@ main {
 
       .swiper-wrapper {
         touch-action: pan-y;
+        transform: translate3d(0, 0, 0);
         .swiper {
           display: flex;
           align-items: center;
-          transform: translate3d(0,0,0);
 
           .swiper-first {
             padding: 0 $padding;
@@ -615,42 +616,41 @@ main {
                       justify-content: center;
                       border-radius: $radius;
                     }
-                    .new-price{
-
-                      span{
+                    .new-price {
+                      span {
                         font-size: 1.3rem;
                       }
-                      span:last-child{
-                        font-size: .9rem;
+                      span:last-child {
+                        font-size: 0.9rem;
                       }
                     }
                   }
                   .slide-old-price {
-                    margin-top: $margin*2;
+                    margin-top: $margin * 2;
                     text-align: left;
                     text-decoration: line-through;
                     color: $color-neutral-300;
 
                     span {
-                      padding-left: $padding*3;
+                      padding-left: $padding * 3;
                     }
                   }
-                  
-                  .slide-progress{
+
+                  .slide-progress {
                     margin-top: $margin;
                     margin-bottom: $margin - 5px;
                     direction: ltr;
                     visibility: hidden;
                     opacity: 0;
 
-                    .progress-bar{
+                    .progress-bar {
                       width: 100%;
                       height: 4px;
                       background-color: $color-neutral-200;
                       border-radius: $radius;
                       overflow: hidden;
 
-                      .progress{
+                      .progress {
                         width: 80%;
                         height: 100%;
                         background-color: $color-primary-700;
@@ -669,6 +669,11 @@ main {
 
 @media screen and (min-width: 1024px) {
   header {
+    position: fixed;
+    width: 100%;
+    background-color: $color-neutral-00;
+    z-index: 2;
+    
     .header {
       padding: $padding $padding * 2;
       padding-bottom: 0;
@@ -934,6 +939,7 @@ main {
     }
   }
   main {
+    padding-top: 114px;
     #slider {
       height: 400px;
 
@@ -958,6 +964,48 @@ main {
           a {
             span {
               font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+    #amazing-slider {
+      .swiper-container {
+        border-radius: $radius + 5;
+        padding: $padding * 2 0;
+
+        .swiper-wrapper {
+          .swiper {
+            .swiper-first {
+              .intro {
+                a {
+                  .intro__detail {
+                    font-size: 1.4rem;
+                  }
+                }
+              }
+            }
+            .swiper-slides {
+              ul {
+                li {
+                  width: 182px;
+                  min-width: 182px;
+
+                  a {
+                    .slide-image {
+                      width: 150px;
+                      height: 150px;
+                    }
+                    .slide-price {
+                      .new-price {
+                        span {
+                          font-size: 1.4rem;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }

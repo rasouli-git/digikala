@@ -99,3 +99,16 @@ function autoSlide() {
 var timer = setInterval(autoSlide, duration);
 
 // end slider
+
+
+// amazing slider
+const amazingSlider = document.querySelector('.swiper-container');
+const amazingwrapper = document.querySelector('.swiper-wrapper');
+
+
+let isPressedIn = false;
+let spaceX;
+
+amazingSlider.addEventListener('mousedown',(e)=>{
+  console.log(e.offsetX);
+})

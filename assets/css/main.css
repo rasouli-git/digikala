@@ -584,6 +584,9 @@ main #digi-link .link__items li a span {
   font-size: 1rem;
   color: #424750;
 }
+main #amazing-slider {
+  margin-bottom: 10px;
+}
 main #amazing-slider .swiper-container {
   padding: 10px 0;
   background: linear-gradient(to top, #ef4056, #ef394e);
@@ -591,11 +594,11 @@ main #amazing-slider .swiper-container {
 }
 main #amazing-slider .swiper-container .swiper-wrapper {
   touch-action: pan-y;
+  transform: translate3d(0, 0, 0);
 }
 main #amazing-slider .swiper-container .swiper-wrapper .swiper {
   display: flex;
   align-items: center;
-  transform: translate3d(0, 0, 0);
 }
 main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-first {
   padding: 0 10px;
@@ -715,6 +718,12 @@ main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul
 }
 
 @media screen and (min-width: 1024px) {
+  header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 2;
+  }
   header .header {
     padding: 10px 20px;
     padding-bottom: 0;
@@ -955,6 +964,9 @@ header .header__bottom .bottom-right .menu .question div i {
   header .header__bottom .bottom-left i {
     display: none;
   }
+  main {
+    padding-top: 114px;
+  }
   main #slider {
     height: 400px;
   }
@@ -974,6 +986,24 @@ header .header__bottom .bottom-right .menu .question div i {
   }
   main #digi-link .link__items li a span {
     font-size: 1.2rem;
+  }
+  main #amazing-slider .swiper-container {
+    border-radius: 17px;
+    padding: 20px 0;
+  }
+  main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-first .intro a .intro__detail {
+    font-size: 1.4rem;
+  }
+  main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul li {
+    width: 182px;
+    min-width: 182px;
+  }
+  main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul li a .slide-image {
+    width: 150px;
+    height: 150px;
+  }
+  main #amazing-slider .swiper-container .swiper-wrapper .swiper .swiper-slides ul li a .slide-price .new-price span {
+    font-size: 1.4rem;
   }
 }
 .x {
